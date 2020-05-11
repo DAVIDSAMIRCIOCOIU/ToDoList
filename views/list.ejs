@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    // Static files are stored in the public folder
+    <link rel="stylesheet" href="css/styles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+
+<body>
+
+    <div class="box" id="heading">
+        <h1><%= kindOfDay %> ToDo List</h1>
+    </div>
+
+    <div class="box">
+        <!-- Iterating through the array and displaying each item -->
+        <% for( var i = 0; i < newListItems.length; i++) { %>
+        <div class="item">
+            <input type="checkbox">
+            <p> <%= newListItems[i] %></p>
+        </div>
+        <% } %>
+
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="button">+</button>
+        </form>
+    </div>
+</body>
+</html>
