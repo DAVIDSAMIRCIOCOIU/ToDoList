@@ -50,3 +50,7 @@ app.post("/", (req, res) => {
 app.get("/work", (req,res) => {
     res.render("list", {listTitle: "Work", newListItems: workItems});
 });
+
+app.get("/about", (req, res) => {
+    res.render("about");
+});
