@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    // Static files are stored in the public folder
+    <!-- // Static files are stored in the public folder -->
     <link rel="stylesheet" href="css/styles.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 <body>
 
     <div class="box" id="heading">
-        <h1><%= kindOfDay %> ToDo List</h1>
+        <h1><%= listTitle %> ToDo List</h1>
     </div>
 
     <div class="box">
@@ -27,7 +27,7 @@
 
         <form class="item" action="/" method="post">
             <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-            <button type="submit" name="button">+</button>
+            <button type="submit" name="list" value=<%= listTitle %>>+</button>
         </form>
     </div>
 </body>
